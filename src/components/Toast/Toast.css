@@ -1,0 +1,22 @@
+
+.toast__container{
+    width: 250px;
+    background-color: var(--gray);
+}
+.toast__content{
+    display: flex;
+    gap: 10px;
+    position:relative;
+}
+.toast__content p{
+    font-weight: bold;
+    text-align: center;
+    padding: 18px 25px;
+}
+.toast__content span{
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+}
