@@ -1,0 +1,5 @@
+.homeContent__container{
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: row;
+}

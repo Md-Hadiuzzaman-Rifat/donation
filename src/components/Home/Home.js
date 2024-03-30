@@ -15,7 +15,7 @@ const Home = () => {
             </h3>
             <div className="home__top__content__input">
               <input type="text" placeholder="Enter Your Email"/>
-              <button className="button">Join Free</button>
+              <button className="button">Join For Free</button>
             </div>
           </div>
           <div className="home__top__image">
