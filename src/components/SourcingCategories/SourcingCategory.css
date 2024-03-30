@@ -1,0 +1,18 @@
+.scourgingCategories{
+    background-color: var(--green);
+    height: 100%;
+    border-radius: 20px;
+    border: 1px solid black
+}
+
+.scourgingCategories___container{
+    padding: 4rem 2rem;
+    
+}
+.scourgingCategories__content__item{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 30px 0;
+    font-size: var(--semi-font);
+}

@@ -10,7 +10,7 @@
     background-color: var(--gray);
     line-height: 3.5rem;
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: var(--medium-font);
     padding: 30px;
 }
 
@@ -22,13 +22,13 @@
 .loanForm__form input{
     background-color: var(--green);
     padding: 6px 15px;
-    font-size: 1.25rem;
+    font-size: var(--medium-font);
 }
 ::placeholder {
     color: black;
     opacity: 1; /* Firefox */
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: var(--medium-font);
   }
   
   ::-ms-input-placeholder { /* Edge 12-18 */

@@ -1,0 +1,31 @@
+.loanBox{
+    background-color: var(--gray);
+    border-radius: 5px;
+}
+.loanBox__container{
+    padding: 1rem;
+}
+
+.loanBox__topSection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+.loanBox__topSection__person{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.loanBox__middleSection{
+    margin: 0.5rem 0;
+}
+.loanBox__bottomSection{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+

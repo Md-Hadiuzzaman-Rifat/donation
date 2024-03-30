@@ -1,6 +1,9 @@
 .loan{
-
+    width: 100%;
+    min-height: 100vh;
 }
 .container{
-    
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 4rem;
 }

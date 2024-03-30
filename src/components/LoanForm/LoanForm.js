@@ -29,7 +29,7 @@ const LoanForm = () => {
             <input type="text" />
             Tk
           </div>
-          <button className="button" type="submit">Apply</button>
+          <button classname="btn-green" type="submit">Apply</button>
         </form>
       </div>
     </div>
