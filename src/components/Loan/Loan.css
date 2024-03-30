@@ -2,8 +2,16 @@
     width: 100%;
     min-height: 100vh;
 }
-.container{
+.loan__container{
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 2rem 4rem;
+}
+.loan__container__loanSection{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.loan__container__button{
+    margin: 1.5rem 0;
 }

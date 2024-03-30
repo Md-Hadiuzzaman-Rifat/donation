@@ -1,21 +1,26 @@
-import './App.css';
-import Loan from './components/Loan/Loan';
-import CrowdSourcing from './components/CrowdSourcing/CrowdSourcing';
-import LoanForm from './components/LoanForm/LoanForm';
-import Toast from './components/Toast/Toast';
-import Review from './components/Review/Review';
+import "./App.css";
+import Loan from "./components/Loan/Loan";
+import CrowdSourcing from "./components/CrowdSourcing/CrowdSourcing";
+import LoanForm from "./components/LoanForm/LoanForm";
+import Toast from "./components/Toast/Toast";
+import Review from "./components/Review/Review";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
     <div className="App">
-      {/* <div>
-        Hello World
-      </div> */}
-      <Loan></Loan>
-      <CrowdSourcing></CrowdSourcing>
-      <LoanForm></LoanForm>
-      <Toast></Toast>
-      <Review></Review>
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/home" element={<Home/>}></Route>
+        <Route path="/loan" element={<Loan></Loan>}></Route>
+        <Route path="/crowdsourcing" element={<CrowdSourcing />}></Route>
+        <Route path="/loanform" element={<LoanForm />}></Route>
+        <Route path="/review" element={<Review></Review>}></Route>
+        {/* <Toast></Toast> */}
+      </Routes>
     </div>
   );
 }

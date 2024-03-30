@@ -1,0 +1,81 @@
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg);
+}
+.home__container{
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+.home__top{
+    padding: 0 2.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.home__top__content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-around;
+}
+.home__top__content__input{
+    display: flex;
+    border: 0.05rem solid black;
+    width:fit-content;
+}
+.home__top__content__input input{
+    border: none;
+}
+.home__top__content__input button{
+    border: none;
+}
+.home__top__image{
+    flex: 1;
+}
+.home__top__image img{
+    width: 100%;
+    flex-basis: 300px;
+}
+
+.home__middle__heading{
+    background-color: var(--gray);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.25rem 1rem;
+}
+.home__bottom{
+    padding: 0 2.5rem;
+}
+
+.home__bottom__brand{
+    padding: 0 1.5rem;
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+}
+.home__bottom__brand__university img{
+    width: 65%;
+}
+.home__bottom__brand__socialLinks{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+.home__bottom__brand__socialLinks img{
+    width: 15%;
+}
+
+.big span{
+color: #028546
+}
