@@ -5,6 +5,12 @@
     align-items: center;
     justify-content: center;
 }
+.loanFrom__back{
+    position: absolute;
+    cursor: pointer;
+    font-size: 2.25rem;
+}
+
 .loanForm__container{
     max-width: 800px;
     background-color: var(--gray);
@@ -19,10 +25,13 @@
     font-size: 2.25rem;
     font-weight: 500;
 }
-.loanForm__form input{
+.loanForm__form input,textarea{
     background-color: var(--green);
     padding: 6px 15px;
     font-size: var(--medium-font);
+}
+.loanForm__form textarea{
+    width: 100%;
 }
 ::placeholder {
     color: black;

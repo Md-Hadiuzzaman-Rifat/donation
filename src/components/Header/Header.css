@@ -11,6 +11,9 @@
     justify-content: space-between;
     padding: 1rem;
 }
+.header__container__profile{
+    cursor: pointer;
+}
 .header__container__search input{
     padding: 10px 0.5rem;
     border-radius: 10px;

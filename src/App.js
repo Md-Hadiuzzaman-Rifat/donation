@@ -7,6 +7,7 @@ import Review from "./components/Review/Review";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import OfferLoan from "./components/OfferLoan/OfferLoan";
 
 function App() {
   return (
@@ -18,7 +19,10 @@ function App() {
         <Route path="/loan" element={<Loan></Loan>}></Route>
         <Route path="/crowdsourcing" element={<CrowdSourcing />}></Route>
         <Route path="/loanform" element={<LoanForm />}></Route>
+        <Route path="/offerLoan" element={<OfferLoan />}></Route>
         <Route path="/review" element={<Review></Review>}></Route>
+        <Route path="/login" element={<Review></Review>}></Route>
+        <Route path="/register" element={<Review></Review>}></Route>
         {/* <Toast></Toast> */}
       </Routes>
     </div>

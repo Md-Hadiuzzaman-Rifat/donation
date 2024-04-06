@@ -1,8 +1,15 @@
 import React from 'react';
 import { CgProfile } from "react-icons/cg";
 import "./LoanBox.css"
+import {useNavigate} from "react-router-dom"
 
 const LoanBox = () => {
+    const navigate= useNavigate()
+
+    const handleForm=()=>{
+        navigate('/offerLoan')
+    }
+
     return (
         <div className='loanBox'>
             <div className="loanBox__container">
@@ -23,7 +30,7 @@ const LoanBox = () => {
                 <div className="loanBox__bottomSection">
                     <button className="btn-semi-green">Expected Payback Time: 30 days</button>
                     <div className="loanBox__bottomSection__buttonGroup">
-                    <button className="btn-semi-green">View Details</button>
+                    <button onClick={handleForm} className="btn-semi-green">Offer Loan</button>
                     <button className="btn-semi-green">Lend 500tk</button>
                     </div>
                 </div>
