@@ -20,7 +20,7 @@ const Header = () => {
                 </div>
                 <div className="header__container__profile">
                     <CgProfile className='icon'></CgProfile>
-                   <h3 onClick={navigate('/login')}>Login</h3> 
+                   <h3 onClick={()=>navigate('/login')}>Login</h3> 
                 </div>
             </div>
         </div>

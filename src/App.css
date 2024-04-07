@@ -48,3 +48,7 @@ button{
   border-radius: 20px;
   padding: 5px 30px;
 }
+.register-heading{
+  font-weight: 500 ;
+  margin: 20px 0 ;
+}
