@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LoanBox from "../LoanBox/LoanBox";
 import "./Loan.css";
-import LoanForm from "../LoanForm/LoanForm";
 import {useNavigate} from "react-router-dom"
 
 const Loan = () => {
-
   const navigate= useNavigate()
+  const [allLoans, setAllLoans]= useState([])
+
+  useEffect(()=>{
+    fetch('http://localhost:2020/allLoanPost')
+      .then(res=>res.json())
+      .then(loans=>setAllLoans(loans))
+  },[])
 
   const handleLoan=()=>{
     navigate("/loanform")
@@ -20,10 +25,9 @@ const Loan = () => {
         <button className="btn-semi-green">Inbox</button>
         </div>
         <div className="loan__container__loanSection">
-        <LoanBox></LoanBox>
-        <LoanBox></LoanBox>
-        <LoanBox></LoanBox>
-        <LoanBox></LoanBox>
+        {
+          allLoans.length > 0 && allLoans.map(loan=><LoanBox key={loan._id} loan={loan}/>)
+        }
         </div>
       </div>
     </div>

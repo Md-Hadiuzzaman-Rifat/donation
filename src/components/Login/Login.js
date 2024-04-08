@@ -1,8 +1,23 @@
 import React from "react";
 import "./Login.css";
+import {Link} from "react-router-dom"
+import {useState} from "react"
+import { useAuth } from "../../context/AuthContext";
+import {useNavigate} from "react-router-dom"
 
 const Login = () => {
-  const handleSubmit = () => {};
+  const [email, setEmail]= useState("")
+  const [password, setPassword]= useState("")
+
+  const {login}= useAuth()
+  const navigate= useNavigate()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    login(email, password)
+    navigate('/')
+  };
+
   return (
     <div className="login">
       <div className="login__container">
@@ -15,9 +30,11 @@ const Login = () => {
             <p>Sign in and get financial help!</p>
             <form className="login__form" onSubmit={handleSubmit}>
               
-                <input type="email" placeholder="Email" id="utuEmail" name="utuEmail" required />
+                <input
+                onChange={e=>setEmail(e.target.value)} type="email" placeholder="Email" id="utuEmail" name="utuEmail" required />
       
                 <input
+                onChange={e=>setPassword(e.target.value)}
                   type="password"
                   id="confirmPassword"
                   name="confirmPassword"
@@ -28,9 +45,11 @@ const Login = () => {
                 Sign In
               </button>
               <p style={{margin:"0 auto"}}>or</p>
+              <Link to="/register">
               <button className="btn-green login-button" >
                 Register
               </button>
+              </Link>
             </form>
           </div>
         </div>

@@ -1,8 +1,26 @@
 import React from "react";
 import "./SignUp.css";
+import {useAuth} from "../../context/AuthContext"
+import {useState} from "react"
+import {useNavigate} from "react-router-dom"
 
 const SignUp = () => {
-  const handleSubmit = () => {};
+
+  const [firstName, setFirstName]= useState("")
+  const [lastName, setLastName]= useState("")
+  const [email, setEmail]= useState("")
+  const [password, setPassword]= useState("")
+
+  const {signup} = useAuth();
+  const navigate= useNavigate()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const name= firstName+ " "+lastName
+    signup(email, password, name)
+    navigate('/')
+  };
+
   return (
     <div className="signUp">
       <div className="signUp__container">
@@ -16,13 +34,13 @@ const SignUp = () => {
             <form className="signUp__form" onSubmit={handleSubmit}>
               <div className="signUp__form-flex">
                 <div className="input-level">
-                  <label htmlFor="firstName">First Name</label>
-                  <input type="text" id="firstName" name="firstName" required />
+                <label htmlFor="first Name">First Name</label>
+                  <input onChange={e=>setFirstName(e.target.value)} type="text" id="firstName" name="firstName" required />
                 </div>
 
                 <div className="input-level">
                   <label htmlFor="lastName">Last Name</label>
-                  <input type="text" id="lastName" name="lastName" required />
+                  <input onChange={e=>setLastName(e.target.value)} type="text" id="lastName" name="lastName" required />
                 </div>
               </div>
 
@@ -45,15 +63,15 @@ const SignUp = () => {
               </div>
 
               <div className="input-level">
-                <label htmlFor="utuEmail" class="uiu-email">
+                <label htmlFor="utuEmail" className="uiu-email">
                   UIU Email Address
                 </label>
-                <input type="email" id="utuEmail" name="utuEmail" required />
+                <input onChange={e=>setEmail(e.target.value)} type="email" id="utuEmail" name="utuEmail" required />
               </div>
 
               <div className="signUp__form-flex">
                 <div className="input-level">
-                  <label htmlFor="gender" class="GENDER">
+                  <label htmlFor="gender" className="GENDER">
                     Gender
                   </label>
                   <select id="gender" name="gender">
@@ -76,7 +94,7 @@ const SignUp = () => {
 
               <div className="input-level">
                 <label htmlFor="password">Password</label>
-                <input type="password" id="password" name="password" required />
+                <input onChange={e=>setPassword(e.target.value)} type="password" id="password" name="password" required />
               </div>
 
               <div className="input-level">

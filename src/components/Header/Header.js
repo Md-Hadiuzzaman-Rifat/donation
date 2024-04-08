@@ -3,9 +3,13 @@ import { CgProfile } from 'react-icons/cg';
 import"./Header.css"
 import { Link } from 'react-router-dom';
 import {useNavigate} from "react-router-dom"
+import { useAuth } from '../../context/AuthContext';
 
 const Header = () => {
     const navigate= useNavigate()
+
+    const {currentUser}= useAuth() || {}
+    const {displayName}= currentUser || {}
 
     return (
         <div className='header'>
@@ -19,8 +23,11 @@ const Header = () => {
                     <Link className="header__container__link__item" to="/crowdsourcing">Crowd Sourcing</Link>
                 </div>
                 <div className="header__container__profile">
-                    <CgProfile className='icon'></CgProfile>
-                   <h3 onClick={()=>navigate('/login')}>Login</h3> 
+                    {
+                        displayName ? <CgProfile onClick={()=>navigate('/profile')} className='icon'></CgProfile> :<h3 onClick={()=>navigate('/login')}>Login</h3> 
+                    }
+                    
+                   
                 </div>
             </div>
         </div>

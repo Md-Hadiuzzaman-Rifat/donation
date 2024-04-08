@@ -8,7 +8,6 @@ const SourcingCategories = () => {
         <div className="scourgingCategories__content">
           <h3>Categories</h3>
           <div className="scourgingCategories__content__item">
-
           <div>
             <input
               type="checkbox"
@@ -16,7 +15,7 @@ const SourcingCategories = () => {
               name="personal"
               value="Personal"
             />
-            <label for="personal">Personal</label>
+            <label htmlFor="personal">Personal</label>
           </div>
           <div>
             <input
@@ -25,7 +24,7 @@ const SourcingCategories = () => {
               name="Medical"
               value="Medical"
             />
-            <label for="Medical">Medical</label>
+            <label htmlFor="Medical">Medical</label>
           </div>
           <div>
             <input
@@ -34,7 +33,7 @@ const SourcingCategories = () => {
               name="nonProfit"
               value="Non Profit"
             />
-            <label for="Non Profit">Non Profit</label>
+            <label htmlFor="Non Profit">Non Profit</label>
           </div>
           <div>
             <input
@@ -43,7 +42,7 @@ const SourcingCategories = () => {
               name="emergency"
               value="Emergency"
             />
-            <label for="Emergency">Emergency</label>
+            <label htmlFor="Emergency">Emergency</label>
             </div>
           </div>
         </div>
