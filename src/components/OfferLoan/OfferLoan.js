@@ -1,7 +1,7 @@
 import React from "react";
 import "./OfferLoan.css";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
-import {useNavigate} from "react-router-dom"
+import {useNavigate, useParams} from "react-router-dom"
 
 const OfferLoan = () => {
   const navigate= useNavigate()
@@ -9,6 +9,9 @@ const OfferLoan = () => {
     e.preventDefault();
     navigate('/loan')
   };
+
+  const {id}= useParams()
+  
 
   return (
     <div className="loanForm">

@@ -6,10 +6,10 @@ import {useNavigate} from "react-router-dom"
 const LoanBox = ({loan}) => {
     const navigate= useNavigate()
 
-    console.log(loan);
+    const {name, amount, cause, description, email, uid}= loan || {}
 
     const handleForm=()=>{
-        navigate('/offerLoan')
+        navigate(`/offerLoan/${uid}`)
     }
 
     return (
@@ -19,7 +19,7 @@ const LoanBox = ({loan}) => {
                     <div className='loanBox__topSection__person'>
                     <CgProfile className='icon'/>
 
-                        Md Hadiuzzamana Rifat 01910803372
+                        {name} {uid}
                     </div>
                     <div className='loanBox__topSection__rating'>
                         <button className="btn-semi-green">Rating: 5 star</button>
@@ -27,7 +27,7 @@ const LoanBox = ({loan}) => {
                     </div>
                 </div>
                 <div className="loanBox__middleSection">
-                    <h3>Need 500 tk for grocery supply</h3>
+                    <h3>{cause}</h3>
                 </div>
                 <div className="loanBox__bottomSection">
                     <button className="btn-semi-green">Expected Payback Time: 30 days</button>

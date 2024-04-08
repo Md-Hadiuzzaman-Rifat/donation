@@ -28,7 +28,7 @@ function App() {
           <Route path="/crowdsourcing" element={<CrowdSourcing />}></Route>
           {/* // private route  */}
           <Route path="/loanform" element={<PrivateSingleRoute><LoanForm></LoanForm></PrivateSingleRoute>}></Route>
-          <Route path="/offerLoan" element={<PrivateSingleRoute><OfferLoan/></PrivateSingleRoute>}></Route>
+          <Route path="/offerLoan/:id" element={<PrivateSingleRoute><OfferLoan/></PrivateSingleRoute>}></Route>
           
           <Route path="/review" element={<Review></Review>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
