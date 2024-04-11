@@ -1,10 +1,11 @@
 import React from 'react';
+import ProfileLayout from '../ProfileLayout/ProfileLayout';
 
 const Response = () => {
     return (
-        <div>
-            
-        </div>
+        <ProfileLayout>
+            <h2>This is Response</h2>
+        </ProfileLayout>
     );
 };
 

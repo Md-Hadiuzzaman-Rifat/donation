@@ -15,6 +15,7 @@ import Response from "./components/Response/Response";
 import ApplyFor from "./components/ApplyFor/ApplyFor";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import PrivateSingleRoute from "./components/PrivateRoute/PrivateSingleRoute";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           {/* // private route  */}
           <Route path="/profile/*" element={<PrivateRoute />}>
             <Route path="response" element={<Response></Response>}></Route>
+            <Route path="about" element={<About></About>}></Route>
             <Route path="applyFor" element={<ApplyFor></ApplyFor>}></Route>
           </Route>
           {/* <Toast></Toast> */}

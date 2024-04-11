@@ -1,30 +1,21 @@
-import React from 'react';
-import "./Porfile.css"
-import { useAuth } from '../../context/AuthContext';
+import React from "react";
+import "./Porfile.css";
+import { useAuth } from "../../context/AuthContext";
+import { Link } from "react-router-dom";
+import ProfileLayout from "../ProfileLayout/ProfileLayout";
 
 const Profile = () => {
-    const {logout}= useAuth()
+  const { logout } = useAuth();
 
-    const handleLogout=()=>{
-        logout()
-    }
+  const handleLogout = () => {
+    logout();
+  };
 
-    return (
-        <div className='profile'>
-            <div className="profile__container">
-
-                <div className="profile__left">
-                        <h3>Apply For</h3>
-                        <h3>Response</h3>
-                        <h3 onClick={handleLogout}>Logout</h3>
-                    </div>
-                <div className="profile__right">
-                    
-                    </div>
-
-            </div>
-        </div>
-    );
+  return (
+    <ProfileLayout>
+      <h1>helo</h1>
+    </ProfileLayout>
+  );
 };
 
 export default Profile;

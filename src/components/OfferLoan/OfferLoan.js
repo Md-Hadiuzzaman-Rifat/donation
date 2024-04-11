@@ -11,7 +11,6 @@ const OfferLoan = () => {
   };
 
   const {id}= useParams()
-  
 
   return (
     <div className="loanForm">
