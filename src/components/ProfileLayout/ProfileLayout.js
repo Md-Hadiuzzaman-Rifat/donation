@@ -12,7 +12,6 @@ const ProfileLayout = ({children}) => {
                 <div className="profile__left">
                         <Link to="/profile/about"><h3>About</h3></Link>
                         <Link to="/profile/applyFor"><h3>Apply For</h3></Link>
-                        <Link to="/profile/response"><h3>Response</h3></Link>
                         <h3 onClick={logout}>Logout</h3>
                     </div>
                 <div className="profile__right">

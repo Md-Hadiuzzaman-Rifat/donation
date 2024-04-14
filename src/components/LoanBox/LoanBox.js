@@ -6,10 +6,11 @@ import {useNavigate} from "react-router-dom"
 const LoanBox = ({loan}) => {
     const navigate= useNavigate()
 
-    const {name, amount, cause, description, email, uid}= loan || {}
+    const {name, amount, cause, description, email, uid, _id}= loan || {}
+    
 
     const handleForm=()=>{
-        navigate(`/offerLoan/${uid}`)
+        navigate(`/offerLoan/${_id}`)
     }
 
     return (
@@ -18,7 +19,6 @@ const LoanBox = ({loan}) => {
                 <div className='loanBox__topSection'>
                     <div className='loanBox__topSection__person'>
                     <CgProfile className='icon'/>
-
                         {name} {uid}
                     </div>
                     <div className='loanBox__topSection__rating'>
@@ -33,7 +33,7 @@ const LoanBox = ({loan}) => {
                     <button className="btn-semi-green">Expected Payback Time: 30 days</button>
                     <div className="loanBox__bottomSection__buttonGroup">
                     <button onClick={handleForm} className="btn-semi-green">Offer Loan</button>
-                    <button className="btn-semi-green">Lend 500tk</button>
+                    <button className="btn-semi-green">Lend {amount}</button>
                     </div>
                 </div>
             </div>

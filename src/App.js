@@ -37,7 +37,7 @@ function App() {
           <Route path="/profile" element={<Profile />}></Route>
           {/* // private route  */}
           <Route path="/profile/*" element={<PrivateRoute />}>
-            <Route path="response" element={<Response></Response>}></Route>
+            <Route path="applyFor/response/:id" element={<Response></Response>}></Route>
             <Route path="about" element={<About></About>}></Route>
             <Route path="applyFor" element={<ApplyFor></ApplyFor>}></Route>
           </Route>
