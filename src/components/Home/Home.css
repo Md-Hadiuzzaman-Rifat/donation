@@ -48,11 +48,17 @@
     border-radius: 5px;
 }
 .home__top__image{
+    flex-basis: 300px;
     flex: 1;
 }
 .home__top__image img{
     width: 100%;
-    flex-basis: 300px;
+    min-width: 300px;
+}
+.homeContent__middle{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 }
 
 .home__middle__heading{
@@ -62,6 +68,8 @@
     align-items: center;
     justify-content: center;
     padding: 2.25rem 1rem;
+    margin-top: 100px;
+    margin-bottom: 200px;
 }
 .home__bottom{
     padding: 0 2.5rem;

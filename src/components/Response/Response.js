@@ -10,17 +10,20 @@ const Response = () => {
     const {id:loanId} = params || {}
     
     useEffect(()=>{
-        fetch(`http://localhost:2020/responses/${loanId}`)
-            .then(res=>res.json())
-            .then(data=>setResponses(data))
-
             fetch(`http://localhost:2020/singleLoan/${loanId}`)
             .then(res=>res.json())
             .then(data=>setLoanPost(data))
     },[loanId])
+    useEffect(()=>{
+        fetch(`http://localhost:2020/responses/${loanId}`)
+            .then(res=>res.json())
+            .then(data=>setResponses(data))
+    },[loanId])
 
-    console.log("responses "+ responses);
-    console.log("LoanPost "+ loanPost);
+    console.log(responses);
+    console.log(loanPost);
+
+
     return (
         <ProfileLayout>
             <h2>This is Response</h2>
