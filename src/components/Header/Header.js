@@ -24,7 +24,7 @@ const Header = () => {
                 </div>
                 <div className="header__container__profile">
                     {
-                        displayName ? <CgProfile onClick={()=>navigate('/profile')} className='icon'></CgProfile> :(
+                        displayName ? <CgProfile onClick={()=>navigate('/profile/about')} className='icon'></CgProfile> :(
                             <div className='header__container__login'>
                                 <p onClick={()=>navigate('/login')}>Sign In</p> 
                                 <button className='button button-signIn'>Join Us</button>

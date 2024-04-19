@@ -16,12 +16,13 @@ import ApplyFor from "./components/ApplyFor/ApplyFor";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import PrivateSingleRoute from "./components/PrivateRoute/PrivateSingleRoute";
 import About from "./components/About/About";
+import MainHeader from "./components/MainHeader/MainHeader";
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <Header></Header>
+        
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
@@ -34,7 +35,7 @@ function App() {
           <Route path="/review" element={<Review></Review>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/register" element={<SignUp></SignUp>}></Route>
-          <Route path="/profile" element={<Profile />}></Route>
+  
           {/* // private route  */}
           <Route path="/profile/*" element={<PrivateRoute />}>
             <Route path="applyFor/response/:id" element={<Response></Response>}></Route>

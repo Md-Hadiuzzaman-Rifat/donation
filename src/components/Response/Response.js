@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 import InformationBox from '../InformationBox/InformationBox';
 import ResponseBox from '../ResponseBox/ResponseBox';
 import "./Response.css"
+import MainHeader from '../MainHeader/MainHeader';
+import InfoResponse from '../InfoResponse/InforResponse';
 
 const Response = () => {
     const [responses, setResponses]= useState([])
@@ -27,12 +29,15 @@ const Response = () => {
     
     
     return (
+        <div>
+            <MainHeader></MainHeader>
         <ProfileLayout>
+            
             <div className='response'>
                 <div className="response__container">
                     <div className="response__post">
                         {
-                            loanPost && <InformationBox data={loanPost}/>
+                            loanPost && <InfoResponse data={loanPost}/>
                         }
                     </div>
                     <div className="response__box">
@@ -43,6 +48,7 @@ const Response = () => {
                 </div>
             </div>
         </ProfileLayout>
+        </div>
     );
 };
 

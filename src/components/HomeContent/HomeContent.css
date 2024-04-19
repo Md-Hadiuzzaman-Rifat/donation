@@ -13,7 +13,7 @@
 
 .flex-same{
     display: flex;
-    gap: 1.5rem;
+    gap: 2.75rem;
 }   
 .homeContent__second{
     flex-direction: row-reverse;

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import LoanBox from "../LoanBox/LoanBox";
 import "./Loan.css";
 import {useNavigate} from "react-router-dom"
+import MainHeader from "../MainHeader/MainHeader";
 
 const Loan = () => {
   const navigate= useNavigate()
@@ -19,6 +20,7 @@ const Loan = () => {
 
   return (
     <div className="loan">
+      <MainHeader></MainHeader>
       <div className="loan__container">
         <div className="loan__container__button">
         <button onClick={handleLoan} className="btn-semi-green">+Apply for Loan</button>
