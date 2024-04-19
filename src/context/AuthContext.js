@@ -75,7 +75,7 @@ export function AuthProvider({ children }) {
   }
 
   const saveUser=(user)=>{
-    fetch("http://localhost:2020/addUser",{
+    fetch("https://donation-backend-omega.vercel.app/addUser",{
       method:"POST",
       headers:{
         "content-type":"application/json"

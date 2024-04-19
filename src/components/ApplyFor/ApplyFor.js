@@ -11,7 +11,7 @@ const ApplyFor = () => {
   const [loanPost, SetLoanPost] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:2020/userLoan/${uid}`)
+    fetch(`https://donation-backend-omega.vercel.app/userLoan/${uid}`)
       .then((res) => res.json())
       .then((data) => SetLoanPost(data));
   }, [uid]);
