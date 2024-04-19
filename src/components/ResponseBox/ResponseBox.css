@@ -1,0 +1,8 @@
+.responseBox{
+    margin:1rem;
+     border:1px solid black;
+      background-color: var(--semi-green);
+      border-radius: 20px;
+      padding: 1rem;
+      
+}

@@ -8,22 +8,32 @@
     margin: 0 auto;
 }
 .home__top{
-    padding: 0 2.5rem;
+    padding: 0 8rem;
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 3rem;
 }
 
 .home__top__content{
-    flex: 1;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
+.home__top__content span{
+    cursor: pointer;
+    transition-delay: 0.001s;
+    transition-duration: 0.2s;
+}
+.home__top__content span:hover{
+    color: var(--green);
+}
+
 .home__top__content__input{
     display: flex;
     border: 0.05rem solid black;
@@ -48,12 +58,13 @@
     border-radius: 5px;
 }
 .home__top__image{
-    flex-basis: 300px;
-    flex: 1;
+    flex-basis: 280px;
+    /* flex: 1; */
 }
 .home__top__image img{
-    width: 100%;
-    min-width: 300px;
+    max-width: 450px;
+    flex-basis: 300px;
+    align-self: right;
 }
 .homeContent__middle{
     display: flex;
@@ -75,14 +86,15 @@
     padding: 0 2.5rem;
 }
 
+
 .home__bottom__brand{
     width: 100%;
     gap: 1rem;
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 2.5rem 1.5rem;
+    padding: 3rem 5rem;
 }
 .home__bottom__brand__university img{
     width: 65%;
@@ -91,7 +103,7 @@
     display: flex;
     flex-direction: row;
     cursor: pointer;
-    gap: 0.5rem;
+    gap: 1.5rem;
 }
 .home__bottom__brand__socialLinks img{
     width: 15%;

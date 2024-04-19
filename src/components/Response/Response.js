@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import ProfileLayout from '../ProfileLayout/ProfileLayout';
 import { useAuth } from '../../context/AuthContext';
 import { useParams } from 'react-router-dom';
+import InformationBox from '../InformationBox/InformationBox';
+import ResponseBox from '../ResponseBox/ResponseBox';
+import "./Response.css"
 
 const Response = () => {
     const [responses, setResponses]= useState([])
@@ -21,12 +24,24 @@ const Response = () => {
     },[loanId])
 
     console.log(responses);
-    console.log(loanPost);
-
-
+    
+    
     return (
         <ProfileLayout>
-            <h2>This is Response</h2>
+            <div className='response'>
+                <div className="response__container">
+                    <div className="response__post">
+                        {
+                            loanPost && <InformationBox data={loanPost}/>
+                        }
+                    </div>
+                    <div className="response__box">
+                            {
+                                responses?.length > 0 &&  responses.map(response=><ResponseBox data={response} key={response._id}/>)
+                            }
+                    </div>
+                </div>
+            </div>
         </ProfileLayout>
     );
 };

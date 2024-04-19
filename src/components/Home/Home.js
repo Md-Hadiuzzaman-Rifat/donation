@@ -5,10 +5,15 @@ import HomeContent from "../HomeContent/HomeContent";
 const Home = () => {
   return (
     <div className="home">
+      
       <div className="home__container">
         <div className="home__top">
           <div className="home__top__content">
-            <h1>Funding Student since 2024</h1>
+            <h1>
+              <span>Lend </span> |
+              <span> Borrow </span> |
+              <span> Thrive</span>
+            </h1>
             <h3>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptatibus culpa eius unde doloribus, corrupti quidem.

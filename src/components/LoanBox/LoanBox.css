@@ -7,7 +7,7 @@
 }
 
 .loanBox__topSection{
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -27,5 +27,4 @@
     gap: 1rem;
     justify-content: space-between;
 }
-
 

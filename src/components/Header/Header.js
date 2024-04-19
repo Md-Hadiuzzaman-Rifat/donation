@@ -14,8 +14,8 @@ const Header = () => {
     return (
         <div className='header'>
             <div className="header__container">
-                <div className="header__container__search">
-                    <input type="text" placeholder='search' />
+                <div className="header__container__image">
+                    <img onClick={()=>navigate('/')} src="/resoruces/money.png" alt="" />
                 </div>
                 <div className="header__container__link">
                     <Link className="header__container__link__item" to="/home">Home</Link>
@@ -24,10 +24,13 @@ const Header = () => {
                 </div>
                 <div className="header__container__profile">
                     {
-                        displayName ? <CgProfile onClick={()=>navigate('/profile')} className='icon'></CgProfile> :<h3 onClick={()=>navigate('/login')}>Login</h3> 
+                        displayName ? <CgProfile onClick={()=>navigate('/profile')} className='icon'></CgProfile> :(
+                            <div className='header__container__login'>
+                                <p onClick={()=>navigate('/login')}>Sign In</p> 
+                                <button className='button button-signIn'>Join Us</button>
+                            </div>
+                        )
                     }
-                    
-                   
                 </div>
             </div>
         </div>

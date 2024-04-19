@@ -1,0 +1,9 @@
+.informationBox{
+    margin: 1rem;
+    width: 100%
+}
+
+.informationBox__topSection{
+    display: flex;
+    flex-direction: column;
+}
