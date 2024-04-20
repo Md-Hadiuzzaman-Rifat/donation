@@ -29,6 +29,7 @@ export function AuthProvider({ children }) {
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
+      console.log(user);
       saveUser(user)
       setLoading(false);
       if (user) {
@@ -75,7 +76,7 @@ export function AuthProvider({ children }) {
   }
 
   const saveUser=(user)=>{
-    fetch("https://donation-backend-omega.vercel.app/addUser",{
+    fetch("http://localhost:2020/addUser",{
       method:"POST",
       headers:{
         "content-type":"application/json"

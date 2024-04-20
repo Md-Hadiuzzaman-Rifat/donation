@@ -11,7 +11,7 @@ const ApplyFor = () => {
   const [loanPost, SetLoanPost] = useState([]);
 
   useEffect(() => {
-    fetch(`https://donation-backend-omega.vercel.app/userLoan/${uid}`)
+    fetch(`http://localhost:2020/userLoan/${uid}`)
       .then((res) => res.json())
       .then((data) => SetLoanPost(data));
   }, [uid]);
@@ -19,9 +19,9 @@ const ApplyFor = () => {
   return (
     <div>
       <MainHeader></MainHeader>
-
       <ProfileLayout>
         <div className="applyFor">
+          <h2>Posts You Have Applied For</h2>
           <div className="applyFor__container">
             <div
               style={{ display: "flex", flexDirection: "column", gap: "1rem" }}

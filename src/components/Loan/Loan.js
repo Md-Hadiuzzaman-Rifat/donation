@@ -9,7 +9,7 @@ const Loan = () => {
   const [allLoans, setAllLoans]= useState([])
 
   useEffect(()=>{
-    fetch('https://donation-backend-omega.vercel.app/allLoanPost')
+    fetch('http://localhost:2020/allLoanPost')
       .then(res=>res.json())
       .then(loans=>setAllLoans(loans))
   },[])
@@ -28,7 +28,7 @@ const Loan = () => {
         </div>
         <div className="loan__container__loanSection">
         {
-          allLoans.length > 0 && allLoans.map(loan=><LoanBox key={loan._id} loan={loan}/>)
+          allLoans?.length > 0 && allLoans.map(loan=><LoanBox key={loan._id} loan={loan}/>)
         }
         </div>
       </div>

@@ -5,3 +5,15 @@
     width: 100%;
     padding: 2rem;
 }
+.response-main h2{
+    color: var(--green);
+    font-size: 32px;
+    margin-left: 2rem;
+}
+.response-deny{
+    color: red;
+    font-size: 2rem;
+}
+.response-deny span{
+    font-size: 3rem;
+}

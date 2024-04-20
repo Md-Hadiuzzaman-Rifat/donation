@@ -17,7 +17,7 @@ const LoanForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result= fetch("https://donation-backend-omega.vercel.app/loanPost", {
+    const result= fetch("http://localhost:2020/loanPost", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

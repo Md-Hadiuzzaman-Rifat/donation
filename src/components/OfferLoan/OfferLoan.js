@@ -21,7 +21,7 @@ const OfferLoan = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`https://donation-backend-omega.vercel.app/offerLoan`,{
+    fetch(`http://localhost:2020/offerLoan`,{
       method: "POST",
       headers:{
         "Content-Type": "application/json",
