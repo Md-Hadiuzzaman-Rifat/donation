@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./OfferLoan.css";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import {useNavigate, useParams} from "react-router-dom"
@@ -10,9 +10,23 @@ const OfferLoan = () => {
   const {currentUser}= useAuth()
   const [payTime, setPayTime]= useState("")
   const [pay, setPay]= useState("")
-  const [interest, setInterest]= useState("")
+  const [interest, setInterest]= useState()
+  const [amount, setAmount]= useState()
 
   const {id}= useParams()
+
+
+  useEffect(()=>{
+    fetch(`https://rimon-coral.vercel.app/singleLoan/${id}`)
+    .then(res=>res.json())
+    .then(data=>setAmount(data?.amount))
+  },[id])
+
+  useEffect(()=>{
+    setPay((amount * interest)/100 )
+  },[amount, interest])
+  console.log(typeof(amount));
+  console.log(pay);
 
   const body={loan_id:id, payTime, pay, interest, currentUser}
 
@@ -34,17 +48,16 @@ const OfferLoan = () => {
       <div className="loanFrom__back" onClick={() => navigate(-1)}> <FaArrowAltCircleLeft></FaArrowAltCircleLeft> </div>
         <h2>OFFER LOAN</h2>
         <form className="loanForm__form" onSubmit={handleSubmit}>
-
           <div>
             Expected payback time(month):{" "}
-            <input type="text" placeholder="Enter a digit"  onChange={e=>setPayTime(e.target.value)}/>
+            <input type="text" placeholder="Enter a digit"  onChange={e=>setPayTime(e.target.value)} value={payTime}/>
           </div>
           <div>
             Interest willing to pay{" "}
-            <input type="text" placeholder="Enter a number" onChange={e=>setPay(e.target.value)}/> %
+            <input type="text" placeholder="Enter a number" onChange={e=>setInterest(e.target.value)} value={interest}/> %
           </div>
           <div>
-            Payable Amount After Interest <input type="text" onChange={e=>setInterest(e.target.value)}/>
+            Payable Amount After Interest <input type="text" value={pay}/>
             Tk
           </div>
           <button className="btn-green" type="submit">

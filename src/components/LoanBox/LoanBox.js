@@ -30,7 +30,6 @@ const LoanBox = ({loan}) => {
                 </div>
                 <div className="loanBox__bottomSection">
                     <div></div>
-                    {/* <button className="btn-semi-green">Expected Payback Time: 30 days</button> */}
                     <div className="loanBox__bottomSection__buttonGroup">
                     <button onClick={handleForm} className="btn-semi-green">Offer Loan</button>
                     <button className="btn-semi-green">Lend {amount}</button>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Transaction.css";
 import bkash from "../../img/bkash.png";
 import nagad from "../../img/nagad.png";
@@ -7,8 +7,20 @@ import visa from "../../img/visa.png";
 import master from "../../img/masterCard.png";
 import rocket from "../../img/rocket.png";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Transaction = () => {
+  const [number, setNumber]= useState("")
+  const [tranId, setTranId]= useState("")
+  const navigate= useNavigate()
+
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+
+    console.log(number, tranId);
+    navigate('/loan')
+  }
+
   return (
     <div className="transaction__container">
       <div className="transaction__header">
@@ -33,14 +45,16 @@ const Transaction = () => {
           </div>
         </div>
         <div className="transaction__right-section">
-          <div className="transaction-ids">
+          <form onSubmit={handleSubmit} className="transaction-ids">
             <div className="mobilenumber">
               <p>Mobile Number/Bank ID</p>
               <br />
               <input
+                onChange={e=>setNumber(e.target.value)}
                 className="transaction__input-style"
                 type="text"
                 name="Kola"
+                required 
                 placeholder="enter your mobile id"
                 id=""
               />
@@ -49,21 +63,24 @@ const Transaction = () => {
               <p>Transaction ID</p>
               <br />
               <input
+              onChange={e=>setTranId(e.target.value)}
                 className="transaction__input-style"
                 type="text"
                 name="Kola"
+                required
                 placeholder="enter your transaction id"
                 id=""
+              
               />
             </div>
             <div className="transaction__button">
-            <Link to="/loan">
-              <button className="transaction__btn" id="confirm">
+            
+              <button type="submit" className="transaction__btn" id="confirm">
                 <h3>CONFIRM</h3>
               </button>
-            </Link>
+      
           </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
