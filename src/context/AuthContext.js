@@ -76,7 +76,7 @@ export function AuthProvider({ children }) {
   }
 
   const saveUser=(user)=>{
-    fetch("http://localhost:2020/addUser",{
+    fetch("https://rimon-coral.vercel.app/addUser",{
       method:"POST",
       headers:{
         "content-type":"application/json"

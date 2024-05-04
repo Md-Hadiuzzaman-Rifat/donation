@@ -22,7 +22,7 @@ const OfferLoan = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result= fetch("http://localhost:2020/offerLoan", {
+    const result= fetch("https://rimon-coral.vercel.app/offerLoan", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
