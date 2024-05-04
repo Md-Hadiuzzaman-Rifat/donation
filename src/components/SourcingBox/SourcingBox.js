@@ -1,9 +1,12 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import "./SourcingBox.css";
-
+import Transaction from "../Transaction/Transaction";
+import { useNavigate } from "react-router-dom";
 
 const SourcingBox = () => {
+  const navigate= useNavigate()
+
   const SourcingCategories = [
     {
       id: 1,
@@ -43,7 +46,7 @@ const SourcingBox = () => {
               <p>{item.describe}</p>
               <div className="sourcingBox__item__content__button">
                 <button className="btn-white">Medical</button>
-                <button className="btn-white">Donate</button>
+                <button onClick={()=>navigate('/profile/transaction')} className="btn-white">Donate</button>
               </div>
             </div>
           </div>

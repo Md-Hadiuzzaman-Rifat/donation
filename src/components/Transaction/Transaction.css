@@ -1,0 +1,10 @@
+.transaction{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #D9D9D9;
+}
+.transaction__container{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 4rem;
+}

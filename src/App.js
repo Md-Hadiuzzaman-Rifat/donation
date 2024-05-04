@@ -17,6 +17,7 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import PrivateSingleRoute from "./components/PrivateRoute/PrivateSingleRoute";
 import About from "./components/About/About";
 import MainHeader from "./components/MainHeader/MainHeader";
+import Transaction from "./components/Transaction/Transaction";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="applyFor/response/:id" element={<Response></Response>}></Route>
             <Route path="about" element={<About></About>}></Route>
             <Route path="applyFor" element={<ApplyFor></ApplyFor>}></Route>
+            <Route path='transaction' element={<Transaction/>}></Route>
           </Route>
           {/* <Toast></Toast> */}
         </Routes>
