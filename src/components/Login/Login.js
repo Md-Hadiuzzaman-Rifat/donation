@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     login(email, password);
-    navigate("/");
+    navigate("/loan");
   };
 
   return (

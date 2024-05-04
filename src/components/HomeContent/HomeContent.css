@@ -33,3 +33,7 @@
     font-size: 30px;
     margin-bottom: 1.5rem;
 }
+.homeContent__content__box__btn{
+    display: flex;
+    gap: 1rem;
+}

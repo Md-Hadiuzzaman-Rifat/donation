@@ -18,7 +18,7 @@ const SignUp = () => {
     e.preventDefault()
     const name= firstName+ " "+lastName
     signup(email, password, name)
-    navigate('/')
+    navigate('/loan')
   };
 
   return (

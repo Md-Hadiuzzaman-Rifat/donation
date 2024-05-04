@@ -1,7 +1,9 @@
 import React from "react";
 import "./HomeContent.css";
+import { useNavigate } from "react-router-dom";
 
 const HomeContent = () => {
+  const navigate= useNavigate()
   return (
     <div className="homeContent">
       <div className="homeContent-container">
@@ -16,8 +18,10 @@ const HomeContent = () => {
                 Access financial support tailored for UIU students. Empowering
                 the next generation through accessible education financing.
               </p>
+              <div className="homeContent__content__box__btn">
               <button className="btn-green">How it Works</button>
-              <button className="btn-green">Join Now</button>
+              <button onClick={()=>navigate("/login")} className="btn-green">Join Now</button>
+              </div>
             </div>
           </div>
         </div>
@@ -34,8 +38,10 @@ const HomeContent = () => {
                 meaningful impact. Together, we fund essential support for those
                 in need.
               </p>
-              <button className="btn-green">How it Works</button>
-              <button className="btn-green">Join Now</button>
+              <div className="homeContent__content__box__btn">
+                <button className="btn-green">How it Works</button>
+                <button onClick={()=>navigate("/login")} className="btn-green">Join Now</button>
+              </div>
             </div>
           </div>
           {/* end  */}

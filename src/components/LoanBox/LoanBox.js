@@ -19,18 +19,19 @@ const LoanBox = ({loan}) => {
                 <div className='loanBox__topSection'>
                     <div className='loanBox__topSection__person'>
                     <CgProfile className='icon'/>
-                        {name} {uid}
+                        {name?.toUpperCase()} 
                     </div>
                     <div className='loanBox__topSection__rating'>
                         <button className="btn-semi-green">Rating: 5 star</button>
-                        <button className="btn-semi-green">Message</button>
+                        <button onClick={()=>navigate('/profile/applyfor')} className="btn-semi-green">Message</button>
                     </div>
                 </div>
                 <div className="loanBox__middleSection">
-                    <h3>{cause}</h3>
+                    <h3>{cause?.toUpperCase()}</h3>
                 </div>
                 <div className="loanBox__bottomSection">
-                    <button className="btn-semi-green">Expected Payback Time: 30 days</button>
+                    <div></div>
+                    {/* <button className="btn-semi-green">Expected Payback Time: 30 days</button> */}
                     <div className="loanBox__bottomSection__buttonGroup">
                     <button onClick={handleForm} className="btn-semi-green">Offer Loan</button>
                     <button className="btn-semi-green">Lend {amount}</button>
