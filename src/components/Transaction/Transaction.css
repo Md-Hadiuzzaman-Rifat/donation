@@ -1,10 +1,116 @@
-.transaction{
-    width: 100%;
-    min-height: 100vh;
-    background-color: #D9D9D9;
+
+.transaction__container {
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f6f6f3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.transaction__container{
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2rem 4rem;
+.transaction__header{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 25vh;
+  margin-top: 5vh;
+  font-size: xx-large;
+}
+.transaction__header h1 {
+  font-family: "Lexend Deca";
+  color: #0d2f56;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.transaction__payhead h3 {
+  color: #0d2f56;
+  font-family: "Lexend Deca";
+  font-size: x-large;
+}
+.transaction__hero-section {
+  padding: 2rem;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.payment-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.transaction__icons{
+  margin-top: 8vh;
+  height: 30vh;
+  width: 30vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.transaction-ids {
+  margin-top: 12vh;
+  margin-left: 10vh;
+  padding: 2rem;
+  border: 2px solid black;
+  display: flex;
+  column-gap: 2vh;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  flex-direction: column;
+  border: 2xpx solid black;
+  border-radius: 15px;
+}
+.mobilenumber {
+  margin-bottom: 14px;
+}
+
+.transaction__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5vh;
+}
+#confirm {
+  height: 2.5vw;
+  width: 25vw;
+  border-radius: 10px;
+}
+.transaction__btn {
+  background-color: #92e3a9;
+  color: #0c233d;
+  font-weight: lighter;
+}
+.btn:hover {
+  background-color: #acc2ac;
+  cursor: pointer;
+}
+.transaction__input-style {
+  height: 1.5vw;
+  width: 23vw;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+}
+.mobilenumber p {
+  color: #0d2f56;
+  font-family: "Lexend Deca";
+}
+.tran-border{
+    width: 150px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.transaction__right-section{
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
