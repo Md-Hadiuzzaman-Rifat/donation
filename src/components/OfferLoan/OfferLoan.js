@@ -17,20 +17,21 @@ const OfferLoan = () => {
   const [interest, setInterest]= useState("")
 
   const {id}= useParams()
-  console.log(id);
 
-  const handleSubmit = (e) => {
+  const body={loan_id:id, title, cause, desc, payTime, pay, interest, currentUser}
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch(`http://localhost:2020/offerLoan`,{
-      method: "POST",
-      headers:{
+    const result= fetch("http://localhost:2020/offerLoan", {
+      headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body:JSON.stringify({loan_id:id, title, cause, desc, payTime, pay, interest, currentUser})
-    })
-    navigate('/loan')
+      method: "POST",
+      body: JSON.stringify(body),
+    });
+    navigate('/')
   };
-
   return (
     <div className="loanForm">
       <div className="loanForm__container">
