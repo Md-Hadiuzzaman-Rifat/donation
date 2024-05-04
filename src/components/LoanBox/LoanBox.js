@@ -8,7 +8,6 @@ const LoanBox = ({loan}) => {
 
     const {name, amount, cause, description, email, uid, _id}= loan || {}
     
-
     const handleForm=()=>{
         navigate(`/offerLoan/${_id}`)
     }
@@ -19,7 +18,7 @@ const LoanBox = ({loan}) => {
                 <div className='loanBox__topSection'>
                     <div className='loanBox__topSection__person'>
                     <CgProfile className='icon'/>
-                        {name?.toUpperCase()} 
+                        {name?.toUpperCase()} : {uid}
                     </div>
                     <div className='loanBox__topSection__rating'>
                         <button className="btn-semi-green">Rating: 5 star</button>

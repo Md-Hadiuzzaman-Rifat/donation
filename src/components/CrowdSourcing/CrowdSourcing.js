@@ -3,6 +3,7 @@ import SourcingBox from '../SourcingBox/SourcingBox';
 import SourcingCategories from '../SourcingCategories/SourcingCategories';
 import "./CrowdSourcing.css"
 import Header from '../Header/Header';
+
 const CrowdSourcing = () => {
     return (
         <div className='crowdSourcing'>

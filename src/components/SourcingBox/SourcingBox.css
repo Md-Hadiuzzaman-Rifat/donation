@@ -27,3 +27,7 @@
     width: 100%;
     object-fit: cover;
 }
+.sourcingBox__item__content__button{
+    display: flex;
+    gap: 12px;
+}

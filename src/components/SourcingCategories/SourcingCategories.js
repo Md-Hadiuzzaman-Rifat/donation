@@ -8,7 +8,7 @@ const SourcingCategories = () => {
         <div className="scourgingCategories__content">
           <h3>Categories</h3>
           <div className="scourgingCategories__content__item">
-          <div>
+          <div className="input-gap">
             <input
               type="checkbox"
               id="personal"
@@ -17,7 +17,7 @@ const SourcingCategories = () => {
             />
             <label htmlFor="personal">Personal</label>
           </div>
-          <div>
+          <div className="input-gap">
             <input
               type="checkbox"
               id="medical"
@@ -26,7 +26,7 @@ const SourcingCategories = () => {
             />
             <label htmlFor="Medical">Medical</label>
           </div>
-          <div>
+          <div className="input-gap">
             <input
               type="checkbox"
               id="nonProfit"
@@ -35,7 +35,7 @@ const SourcingCategories = () => {
             />
             <label htmlFor="Non Profit">Non Profit</label>
           </div>
-          <div>
+          <div className="input-gap">
             <input
               type="checkbox"
               id="emergency"
