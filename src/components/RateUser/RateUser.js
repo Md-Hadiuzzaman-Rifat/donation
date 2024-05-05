@@ -8,20 +8,17 @@ const RateUser = () => {
   const navigate = useNavigate();
   const { id } = useParams() || {};
   const [user, setUser] = useState({});
+  const [success, setSuccess]=useState(false)
 
   // get The user
-  // useEffect(() => {
-  //   fetch(`http://localhost:2020/findUser/${id}`)
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, [id]);
-
-  console.log(user);
+  useEffect(() => {
+    fetch(`http://localhost:2020/findUser/${id}`)
+      .then((res) => res.json())
+      .then((data) => setUser(data));
+  }, [id]);
 
   const [rating, setRating]= useState()
   const [newRating, setNewRating]= useState(5)
-
-  console.log(user);
 
   useEffect(()=>{
     setRating(()=>{
@@ -31,12 +28,12 @@ const RateUser = () => {
   
   const submitRating = (e) => {
     e.preventDefault()
-    const data={ count:user.count+1 , rate: user?.rate+newRating  }
-    // fetch(`http://localhost:2020/editUser/${id}`,{
-    //   method: 'PUT',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(data)
-    // })
+    fetch(`http://localhost:2020/editUser/${id}`,{
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ count:user.count+1 , rate:parseInt(user.rate) + parseInt(newRating)})
+    })
+    navigate('/loan')
   };
 
   return (

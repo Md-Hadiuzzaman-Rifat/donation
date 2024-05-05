@@ -24,7 +24,7 @@ const Loan = () => {
       <div className="loan__container">
         <div className="loan__container__button">
         <button onClick={handleLoan} className="btn-semi-green">+Apply for Loan</button>
-        <button className="btn-semi-green">Inbox</button>
+        <button onClick={()=>navigate('/profile/applyFor')} className="btn-semi-green">Inbox</button>
         </div>
         <div className="loan__container__loanSection">
         {

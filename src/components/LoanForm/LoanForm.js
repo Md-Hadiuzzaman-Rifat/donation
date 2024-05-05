@@ -13,6 +13,7 @@ const LoanForm = () => {
   const { currentUser } = useAuth() || {};
   const { uid, email, displayName } = currentUser || {};
 
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
