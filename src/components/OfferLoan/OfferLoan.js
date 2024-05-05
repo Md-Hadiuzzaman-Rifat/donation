@@ -9,14 +9,12 @@ const OfferLoan = () => {
   const navigate= useNavigate()
   const {currentUser}= useAuth()
   const [payTime, setPayTime]= useState("")
-  const [pay, setPay]= useState(0 || "1")
+  const [pay, setPay]= useState(0)
   const [interest, setInterest]= useState("")
 
   const [amount, setAmount]= useState("")
 
   const {id}= useParams()
-
-  console.log(amount);
 
   useEffect(()=>{
     fetch(`https://rimon-coral.vercel.app/singleLoan/${id}`)
@@ -25,7 +23,7 @@ const OfferLoan = () => {
   },[id])
 
   useEffect(()=>{
-    setPay((parseInt(amount) * parseInt(interest))/100 + parseInt(amount) )
+    setPay((parseInt(amount) * parseInt(interest))/100 + parseInt(amount) || 0)
   },[amount, interest])
   
 

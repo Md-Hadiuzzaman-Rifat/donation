@@ -41,12 +41,14 @@ const LoanForm = () => {
           <div>
             Title: Need{" "}
             <input
+            required
               onChange={(e) => setAmount(e.target.value)}
               type="text"
               placeholder="Enter your amount"
             />{" "}
             for{" "}
             <input
+            required
               onChange={(e) => setCause(e.target.value)}
               type="text"
               placeholder="write down the cause"
@@ -54,7 +56,7 @@ const LoanForm = () => {
           </div>
           <div>
             Description:{" "}
-            <textarea onChange={(e) => setDesc(e.target.value)} type="text" />
+            <textarea required onChange={(e) => setDesc(e.target.value)} type="text" />
           </div>
 
           <button className="btn-green" type="submit">
