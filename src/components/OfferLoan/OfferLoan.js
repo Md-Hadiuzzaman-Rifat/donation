@@ -39,7 +39,7 @@ const OfferLoan = () => {
       method: "POST",
       body: JSON.stringify(body),
     });
-    navigate('/')
+    navigate('/loan')
   };
   return (
     <div className="loanForm">

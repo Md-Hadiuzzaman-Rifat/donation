@@ -12,6 +12,10 @@ const LoanBox = ({loan}) => {
         navigate(`/offerLoan/${_id}`)
     }
 
+    const rateUser=()=>{
+        navigate(`/rate/${uid}`)
+    }
+
     return (
         <div className='loanBox'>
             <div className="loanBox__container">
@@ -21,7 +25,7 @@ const LoanBox = ({loan}) => {
                         {name?.toUpperCase()} : {uid}
                     </div>
                     <div className='loanBox__topSection__rating'>
-                        <button className="btn-semi-green">Rating: 5 star</button>
+                        <button onClick={rateUser} className="btn-semi-green">Rate User</button>
                         <button onClick={()=>navigate('/profile/applyfor')} className="btn-semi-green">Message</button>
                     </div>
                 </div>

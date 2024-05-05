@@ -19,12 +19,12 @@ import About from "./components/About/About";
 import MainHeader from "./components/MainHeader/MainHeader";
 import Transaction from "./components/Transaction/Transaction";
 import Conform from "./components/Conform/Conform";
+import RateUser from "./components/RateUser/RateUser";
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
-        
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
@@ -33,7 +33,7 @@ function App() {
           {/* // private route  */}
           <Route path="/loanform" element={<PrivateSingleRoute><LoanForm></LoanForm></PrivateSingleRoute>}></Route>
           <Route path="/offerLoan/:id" element={<PrivateSingleRoute><OfferLoan/></PrivateSingleRoute>}></Route>
-          
+          <Route path="/rate/:id" element={<RateUser/>}></Route>
           <Route path="/review" element={<Review></Review>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/register" element={<SignUp></SignUp>}></Route>

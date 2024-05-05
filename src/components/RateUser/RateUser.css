@@ -1,0 +1,40 @@
+.rateUser{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rateUser__container{
+    position: relative;
+    max-width: 800px;
+    min-width: 350px;
+    background-color: var(--gray);
+    line-height: 3.5rem;
+    font-weight: 500;
+    font-size: var(--medium-font);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.rateUser__back{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 2.25rem;
+
+}
+.ratingForm{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.rateInput{
+    padding: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}

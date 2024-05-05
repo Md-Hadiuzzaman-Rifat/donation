@@ -11,7 +11,7 @@ const ResponseBox = ({data}) => {
                 <p>Opinion: {data.desc}</p>
                 <p>Payback Time: {data.payTime} month</p>
                 <p>Interest Rate: {data.pay} %</p>
-                <h2>Person Information</h2>
+                <h2>Benefactor Info</h2>
                 <p>Name: {data?.currentUser?.displayName}</p>
                 <p>Email: {data?.currentUser?.email}</p>
                 <p>User ID: {data?.currentUser?.uid}</p>

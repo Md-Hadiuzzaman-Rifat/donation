@@ -29,7 +29,7 @@ export function AuthProvider({ children }) {
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
-      console.log(user);
+      // console.log(user);
       saveUser(user)
       setLoading(false);
       if (user) {
@@ -81,7 +81,7 @@ export function AuthProvider({ children }) {
       headers:{
         "content-type":"application/json"
       },
-      body:JSON.stringify({email:user?.email, name:user?.displayName, uid:user?.uid})
+      body:JSON.stringify({email:user?.email, name:user?.displayName, uid:user?.uid, count: 0, rate: 0})
     })
   }
 
