@@ -1,0 +1,20 @@
+.contractPage{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.281);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contractPage__data{
+    background-color: aliceblue;
+    padding: 2rem;
+}
+.con_bold{
+    font-weight: bold;
+}

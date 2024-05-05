@@ -1,8 +1,15 @@
 import React from 'react';
 import "./ResponseBox.css"
+import { useNavigate } from 'react-router-dom';
 
 const ResponseBox = ({data}) => {
     console.log(data);
+    const navigate= useNavigate()
+
+    const handleClick=()=>{
+        navigate('/profile/contract',{state:data})
+    }
+
     return (
         <div className='responseBox'>
             <div className="response__container">
@@ -15,7 +22,7 @@ const ResponseBox = ({data}) => {
                 <p>Name: {data?.currentUser?.displayName}</p>
                 <p>Email: {data?.currentUser?.email}</p>
                 <p>User ID: {data?.currentUser?.uid}</p>
-                <button style={{marginTop: "1rem"}} className='button btn-green'>Accept</button>
+                <button style={{marginTop: "1rem"}} className='button btn-green' onClick={handleClick}>Accept</button>
             </div>
         </div>
     );

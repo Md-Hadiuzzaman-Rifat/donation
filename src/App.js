@@ -20,6 +20,7 @@ import MainHeader from "./components/MainHeader/MainHeader";
 import Transaction from "./components/Transaction/Transaction";
 import Conform from "./components/Conform/Conform";
 import RateUser from "./components/RateUser/RateUser";
+import ContractPage from "./components/ContractPage/ContractPage";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             <Route path="applyFor" element={<ApplyFor></ApplyFor>}></Route>
             <Route path='transaction' element={<Transaction/>}></Route>
             <Route path='conform' element={<Conform/>}></Route>
+            <Route path='contract' element={<ContractPage/>}></Route>
           </Route>
           {/* <Toast></Toast> */}
         </Routes>

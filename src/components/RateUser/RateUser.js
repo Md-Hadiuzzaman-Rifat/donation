@@ -8,7 +8,6 @@ const RateUser = () => {
   const navigate = useNavigate();
   const { id } = useParams() || {};
   const [user, setUser] = useState({});
-  const [success, setSuccess]=useState(false)
 
   // get The user
   useEffect(() => {
