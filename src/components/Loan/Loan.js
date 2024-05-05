@@ -9,7 +9,7 @@ const Loan = () => {
   const [allLoans, setAllLoans]= useState([])
 
   useEffect(()=>{
-    fetch('https://rimon-coral.vercel.app/allLoanPost')
+    fetch('https://rimon-nyxj.vercel.app/allLoanPost')
       .then(res=>res.json())
       .then(loans=>setAllLoans(loans))
   },[])

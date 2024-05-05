@@ -17,12 +17,12 @@ const Response = () => {
     const {id:loanId} = params || {}
     
     useEffect(()=>{
-            fetch(`https://rimon-coral.vercel.app/singleLoan/${loanId}`)
+            fetch(`https://rimon-nyxj.vercel.app/singleLoan/${loanId}`)
             .then(res=>res.json())
             .then(data=>setLoanPost(data))
     },[loanId])
     useEffect(()=>{
-        fetch(`https://rimon-coral.vercel.app/responses/${loanId}`)
+        fetch(`https://rimon-nyxj.vercel.app/responses/${loanId}`)
             .then(res=>res.json())
             .then(data=>setResponses(data))
     },[loanId])

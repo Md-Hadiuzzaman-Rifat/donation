@@ -18,7 +18,7 @@ const LoanForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result= fetch("https://rimon-coral.vercel.app/loanPost", {
+    const result= fetch("https://rimon-nyxj.vercel.app/loanPost", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

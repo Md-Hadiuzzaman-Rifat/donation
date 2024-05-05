@@ -16,7 +16,7 @@ const LoanBox = ({ loan }) => {
   };
 
   useEffect(()=>{
-    fetch(`http://localhost:2020/findUser/${uid}`)
+    fetch(`https://rimon-nyxj.vercel.app/findUser/${uid}`)
     .then(res=>res.json())
     .then(data=>setUser(data))
   },[uid])
@@ -54,6 +54,7 @@ const LoanBox = ({ loan }) => {
         </div>
         <div className="loanBox__middleSection">
           <h3>{cause?.toUpperCase()}</h3>
+          <p>{description}</p>
         </div>
         <div className="loanBox__bottomSection">
           <div></div>

@@ -11,7 +11,7 @@ const ApplyFor = () => {
   const [loanPost, SetLoanPost] = useState([]);
 
   useEffect(() => {
-    fetch(`https://rimon-coral.vercel.app/userLoan/${uid}`)
+    fetch(`https://rimon-nyxj.vercel.app/userLoan/${uid}`)
       .then((res) => res.json())
       .then((data) => SetLoanPost(data));
   }, [uid]);

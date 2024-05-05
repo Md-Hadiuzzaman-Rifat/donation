@@ -17,7 +17,7 @@ const OfferLoan = () => {
   const {id}= useParams()
 
   useEffect(()=>{
-    fetch(`https://rimon-coral.vercel.app/singleLoan/${id}`)
+    fetch(`https://rimon-nyxj.vercel.app/singleLoan/${id}`)
     .then(res=>res.json())
     .then(data=>setAmount(data?.amount))
   },[id])
@@ -31,7 +31,7 @@ const OfferLoan = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result= fetch("https://rimon-coral.vercel.app/offerLoan", {
+    const result= fetch("https://rimon-nyxj.vercel.app/offerLoan", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

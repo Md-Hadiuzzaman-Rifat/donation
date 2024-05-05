@@ -11,7 +11,7 @@ const RateUser = () => {
 
   // get The user
   useEffect(() => {
-    fetch(`http://localhost:2020/findUser/${id}`)
+    fetch(`https://rimon-nyxj.vercel.app/findUser/${id}`)
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, [id]);
@@ -27,7 +27,7 @@ const RateUser = () => {
   
   const submitRating = (e) => {
     e.preventDefault()
-    fetch(`http://localhost:2020/editUser/${id}`,{
+    fetch(`https://rimon-nyxj.vercel.app/editUser/${id}`,{
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ count:user.count+1 , rate:parseInt(user.rate) + parseInt(newRating)})
