@@ -18,7 +18,12 @@ const Header = () => {
                     <img onClick={()=>navigate('/')} src="/resoruces/money.png" alt="" />
                 </div>
                 <div className="header__container__link">
-                    <Link className="header__container__link__item" to="/home">Home</Link>
+                    {
+                        !currentUser && <Link className="header__container__link__item" to="/home">Home</Link> 
+                    }
+                    {
+                        currentUser && <Link className="header__container__link__item" to="/profile/applyFor">Inbox</Link> 
+                    }
                     <Link className="header__container__link__item" to="/loan">Loan</Link>
                     <Link className="header__container__link__item" to="/crowdsourcing">Crowd Sourcing</Link>
                 </div>

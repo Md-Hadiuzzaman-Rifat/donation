@@ -30,6 +30,9 @@ const Loan = () => {
         {
           allLoans?.length > 0 && allLoans.map(loan=><LoanBox key={loan._id} loan={loan}/>)
         }
+        {
+          allLoans.length ===0  && "Sorry For Loading ..." 
+        }
         </div>
       </div>
     </div>

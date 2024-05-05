@@ -9,12 +9,14 @@ const OfferLoan = () => {
   const navigate= useNavigate()
   const {currentUser}= useAuth()
   const [payTime, setPayTime]= useState("")
-  const [pay, setPay]= useState("")
-  const [interest, setInterest]= useState()
-  const [amount, setAmount]= useState()
+  const [pay, setPay]= useState(0 || "1")
+  const [interest, setInterest]= useState("")
+
+  const [amount, setAmount]= useState("")
 
   const {id}= useParams()
 
+  console.log(amount);
 
   useEffect(()=>{
     fetch(`https://rimon-coral.vercel.app/singleLoan/${id}`)
@@ -23,10 +25,9 @@ const OfferLoan = () => {
   },[id])
 
   useEffect(()=>{
-    setPay((amount * interest)/100 )
+    setPay((parseInt(amount) * parseInt(interest))/100 + parseInt(amount) )
   },[amount, interest])
-  console.log(typeof(amount));
-  console.log(pay);
+  
 
   const body={loan_id:id, payTime, pay, interest, currentUser}
 
@@ -49,15 +50,15 @@ const OfferLoan = () => {
         <h2>OFFER LOAN</h2>
         <form className="loanForm__form" onSubmit={handleSubmit}>
           <div>
-            Expected payback time(month):{" "}
-            <input type="text" placeholder="Enter a digit"  onChange={e=>setPayTime(e.target.value)} value={payTime}/>
+            Expected Return Time(month):{" "}
+            <input type="text" required placeholder="Enter a digit"  onChange={e=>setPayTime(e.target.value)} value={payTime}/>
           </div>
           <div>
             Interest willing to pay{" "}
-            <input type="text" placeholder="Enter a number" onChange={e=>setInterest(e.target.value)} value={interest}/> %
+            <input type="text" required placeholder="Enter a number" onChange={e=>setInterest(e.target.value)} value={interest}/> %
           </div>
           <div>
-            Payable Amount After Interest <input type="text" value={pay}/>
+            Payable Amount After Interest <input  readOnly type="text" value={pay}/>
             Tk
           </div>
           <button className="btn-green" type="submit">

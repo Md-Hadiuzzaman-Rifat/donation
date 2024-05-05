@@ -18,7 +18,7 @@ const Transaction = () => {
     e.preventDefault()
 
     console.log(number, tranId);
-    navigate('/loan')
+    navigate('/profile/conform')
   }
 
   return (

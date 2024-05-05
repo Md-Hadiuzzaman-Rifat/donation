@@ -26,6 +26,7 @@ const LoanForm = () => {
       body: JSON.stringify({ name:displayName, amount, cause, desc, email, uid }),
     });
     console.log(result);
+    navigate("/loan")
   };
 
   return (

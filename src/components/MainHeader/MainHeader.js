@@ -18,7 +18,12 @@ const MainHeader = () => {
                     <input type="text" placeholder='search' />
                 </div>
                 <div className="mainHeader__container__link">
-                    <Link className="mainHeader__container__link__item" to="/home">Home</Link>
+                    {
+                        !currentUser && <Link className="mainHeader__container__link__item" to="/home">Home</Link>
+                    }
+                    {
+                        currentUser && <Link className="mainHeader__container__link__item" to="/profile/applyfor">Inbox</Link>
+                    }
                     <Link className="mainHeader__container__link__item" to="/loan">Loan</Link>
                     <Link className="mainHeader__container__link__item" to="/crowdsourcing">Crowd Sourcing</Link>
                 </div>
